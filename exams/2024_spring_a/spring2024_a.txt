@@ -1,0 +1,23 @@
+
+int* setof_numbers(int* arr, unsigned int size) {
+
+	int* unique = (int*) malloc(size*sizeof(int));
+	unique[0] = 1;
+	
+	for (int i = 0; i < size; i++) {
+		if(i != 0 && arr[i] == arr[i-1]) {
+			continue;
+		}
+		unique[unique[0]++] = arr[i];
+	}
+	
+	return (int*) realloc(unique, unique[0]*sizeof(int));
+}
+
+
+
+int* different_numbers(int* arr, unsigned int size) {
+	
+	int* unique = (int*) malloc(size*sizeof(int));
+	
+}
