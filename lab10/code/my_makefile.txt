@@ -1,0 +1,8 @@
+prog: main.o BST.o
+	gcc -Wall -Werror -g -std=c99 -o prog main.o BST.o
+
+main.o: main.c BST.h
+	gcc -c main.c
+
+BST.o: BST.c BST.h 
+	gcc -c BST.c
