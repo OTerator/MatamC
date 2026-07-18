@@ -1,0 +1,35 @@
+/**	Archive: 
+ * 
+ * 	Seperate validation induces a second iteration over the string, bad for complexity.	
+ * 	Therefore, I've decided to implement it within the construction of the DNASeq, and free everything if Illegal_NA is encountered.
+ * 
+//	Validation helper func			===>			
+// bool isValidSeq(const char* str) {
+
+// 	if (!str) return false;
+
+// 	while (*str != '\0') {
+		
+// 		Base curr = Illegal_NA; 
+// 		for (unsigned int i=0; i<4; i++) {
+// 			if (charBase[i] == toupper(*str)) {
+// 				curr = (Base)(i);	// casting on i.
+// 			}
+// 		}
+
+// 		if (curr = Illegal_NA) return false;
+
+// 		str++;
+// 	}
+
+// 	return true;
+// }
+
+/** previous baseAppend() implementation doc
+ * Base return appender:
+ * ...
+ * Proceeds to append the bits into the block and returns the appended Base to determine if valid, 
+ * in case its not, the user is responsible of handling accordingly
+ * (exit or free the relevant heap allocated memory, etc).
+ *
+ */
